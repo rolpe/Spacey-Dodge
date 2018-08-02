@@ -205,6 +205,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score = 0
         scoreLabel.text = "0"
         
+        ship.mainShip.zRotation = 0
+        
         for enemy in enemies {
             resetEnemy(enemyNode: enemy.node, yPosition: enemy.yPosition)
             enemy.range = 2.0
