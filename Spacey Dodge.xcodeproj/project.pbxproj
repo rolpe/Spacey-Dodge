@@ -15,6 +15,13 @@
 		69CE22BA211329BF009A298A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22B8211329BF009A298A /* Main.storyboard */; };
 		69CE22BC211329C0009A298A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22BB211329C0009A298A /* Assets.xcassets */; };
 		69CE22BF211329C0009A298A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22BD211329C0009A298A /* LaunchScreen.storyboard */; };
+		69CE22C721132A9E009A298A /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE22C621132A9E009A298A /* Spaceship.swift */; };
+		69CE22C921132AB4009A298A /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE22C821132AB4009A298A /* Enemy.swift */; };
+		69CE22CB21132AEE009A298A /* collideParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22CA21132AEE009A298A /* collideParticle.sks */; };
+		69CE22CD21132B34009A298A /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE22CC21132B34009A298A /* MusicHelper.swift */; };
+		69CE22D221132B88009A298A /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22CF21132B87009A298A /* explosion.mp3 */; };
+		69CE22D321132B88009A298A /* woosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22D021132B87009A298A /* woosh.mp3 */; };
+		69CE22D421132B88009A298A /* SpaceEvaders.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 69CE22D121132B87009A298A /* SpaceEvaders.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,14 @@
 		69CE22BB211329C0009A298A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69CE22BE211329C0009A298A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69CE22C0211329C0009A298A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69CE22C621132A9E009A298A /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
+		69CE22C821132AB4009A298A /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		69CE22CA21132AEE009A298A /* collideParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = collideParticle.sks; sourceTree = "<group>"; };
+		69CE22CC21132B34009A298A /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
+		69CE22CF21132B87009A298A /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		69CE22D021132B87009A298A /* woosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = woosh.mp3; sourceTree = "<group>"; };
+		69CE22D121132B87009A298A /* SpaceEvaders.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SpaceEvaders.mp3; sourceTree = "<group>"; };
+		69CE22D52113B503009A298A /* Spacey Dodge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spacey Dodge.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +61,7 @@
 			children = (
 				69CE22AD211329BF009A298A /* Spacey Dodge */,
 				69CE22AC211329BF009A298A /* Products */,
+				69CE22D62113B54A009A298A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +76,72 @@
 		69CE22AD211329BF009A298A /* Spacey Dodge */ = {
 			isa = PBXGroup;
 			children = (
-				69CE22AE211329BF009A298A /* AppDelegate.swift */,
-				69CE22B0211329BF009A298A /* GameScene.sks */,
-				69CE22B2211329BF009A298A /* Actions.sks */,
-				69CE22B4211329BF009A298A /* GameScene.swift */,
-				69CE22B6211329BF009A298A /* GameViewController.swift */,
-				69CE22B8211329BF009A298A /* Main.storyboard */,
+				69CE22DC2113B6B8009A298A /* Game Logic */,
+				69CE22DB2113B692009A298A /* View */,
+				69CE22D92113B656009A298A /* Model */,
+				69CE22D52113B503009A298A /* Spacey Dodge.entitlements */,
 				69CE22BB211329C0009A298A /* Assets.xcassets */,
-				69CE22BD211329C0009A298A /* LaunchScreen.storyboard */,
 				69CE22C0211329C0009A298A /* Info.plist */,
+				69CE22CA21132AEE009A298A /* collideParticle.sks */,
+				69CE22DA2113B668009A298A /* Supporting Files */,
+				69CE22CE21132B87009A298A /* Sounds */,
 			);
 			path = "Spacey Dodge";
+			sourceTree = "<group>";
+		};
+		69CE22CE21132B87009A298A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				69CE22CF21132B87009A298A /* explosion.mp3 */,
+				69CE22D021132B87009A298A /* woosh.mp3 */,
+				69CE22D121132B87009A298A /* SpaceEvaders.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		69CE22D62113B54A009A298A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69CE22D92113B656009A298A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69CE22C621132A9E009A298A /* Spaceship.swift */,
+				69CE22C821132AB4009A298A /* Enemy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		69CE22DA2113B668009A298A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69CE22AE211329BF009A298A /* AppDelegate.swift */,
+				69CE22CC21132B34009A298A /* MusicHelper.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		69CE22DB2113B692009A298A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69CE22B8211329BF009A298A /* Main.storyboard */,
+				69CE22BD211329C0009A298A /* LaunchScreen.storyboard */,
+				69CE22B0211329BF009A298A /* GameScene.sks */,
+				69CE22B2211329BF009A298A /* Actions.sks */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69CE22DC2113B6B8009A298A /* Game Logic */ = {
+			isa = PBXGroup;
+			children = (
+				69CE22B6211329BF009A298A /* GameViewController.swift */,
+				69CE22B4211329BF009A298A /* GameScene.swift */,
+			);
+			path = "Game Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +176,14 @@
 				TargetAttributes = {
 					69CE22AA211329BF009A298A = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -133,9 +212,13 @@
 			files = (
 				69CE22BA211329BF009A298A /* Main.storyboard in Resources */,
 				69CE22B1211329BF009A298A /* GameScene.sks in Resources */,
+				69CE22D421132B88009A298A /* SpaceEvaders.mp3 in Resources */,
+				69CE22CB21132AEE009A298A /* collideParticle.sks in Resources */,
 				69CE22BC211329C0009A298A /* Assets.xcassets in Resources */,
+				69CE22D221132B88009A298A /* explosion.mp3 in Resources */,
 				69CE22BF211329C0009A298A /* LaunchScreen.storyboard in Resources */,
 				69CE22B3211329BF009A298A /* Actions.sks in Resources */,
+				69CE22D321132B88009A298A /* woosh.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				69CE22B5211329BF009A298A /* GameScene.swift in Sources */,
+				69CE22C921132AB4009A298A /* Enemy.swift in Sources */,
 				69CE22B7211329BF009A298A /* GameViewController.swift in Sources */,
+				69CE22CD21132B34009A298A /* MusicHelper.swift in Sources */,
+				69CE22C721132A9E009A298A /* Spaceship.swift in Sources */,
 				69CE22AF211329BF009A298A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MGX2XCNU48;
 				INFOPLIST_FILE = "Spacey Dodge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RonLipkin.Spacey-Dodge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MGX2XCNU48;
 				INFOPLIST_FILE = "Spacey Dodge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RonLipkin.Spacey-Dodge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
