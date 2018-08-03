@@ -17,11 +17,14 @@ class GameViewController: UIViewController {
         
         MusicHelper.sharedHelper.playSound(name: "SpaceEvaders", fileExtension: "mp3")
         
+    }
+    
+    override func viewDidLayoutSubviews() {
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
+                scene.scaleMode = .aspectFit
                 scene.anchorPoint = CGPoint(x: 0.5, y: 0.5) //sets default entry point at center of screen
                 scene.size = view.bounds.size //sets scene size to full size of screen
                 

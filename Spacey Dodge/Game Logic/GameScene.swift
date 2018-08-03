@@ -79,7 +79,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         highScoreLabel.fontName = "Helvetica-Bold"
         highScoreLabel.fontSize = 16
         highScoreLabel.position.y = -(self.size.height/2.2)
-        highScoreLabel.position.x = -(self.size.width/2.5)
+        highScoreLabel.position.x = -(self.size.width/2.7)
         highScoreLabel.zPosition = 1
         addChild(highScoreLabel)
         
